@@ -1,6 +1,0 @@
-define("src/js/home/home-debug", [ "jquery-debug" ], function(require, exports, module) {
-    var $ = require("jquery-debug");
-    exports.init = function() {
-        console.log(123);
-    };
-});
