@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html ng-app>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>月嫂网</title>
+        <link href="http://source.jjfuwu.com/base/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://source.jjfuwu.com/css/detail.css" type="text/css" rel="stylesheet">
+        <script src="http://cdn.bootcss.com/angular.js/1.2.5/angular.js"></script>
+    </head>
+    <body>
+        <!--头部 -->
+        <!--#include file="/inc/header.html" -->
+        <!-- body start-->
+        <div class="container main"  >
+            <div class="container clrfix" >
+                <div class="left-section">
+                    <div class="section-inner">
+                        <div class="bread-crumb" ng-controller="ShopInfo">
+                            <span><a href="/">首页</a></span><span>&gt;</span><span>{{shop_name}}</span>
+                        </div>
+                        <div class="detail-box" ng-controller="ShopInfo">
+                            <!-- 基本信息 -->
+                            <div class="base-info-box clrfix">
+                                <div class="shop-box clrfix">
+                                    <div class= "title-box">
+                                        <h2>{{shop_name}}</h2>
+                                    </div>
+                                    <div class="info-box">
+                                        <dl>
+                                            <dt>地址:</dt>
+                                            <dd>{{shop_addr}}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>电话:</dt>
+                                            <dd>{{shop_tel}}</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>简介:</dt>
+                                            <dd>{{shop_intro}}</dd>
+                                        </dl>
+                                    </div>    
+                                </div>
+                            </div> 
+                            <!-- 基本信息结束 -->
+                            <!-- 附加信息开始 -->
+                            <div class="add-box" >
+                                <div class="add-info">
+                                    <div class="img-list clrfix">
+                                        <ul>        
+                                            <li ng-repeat="img in shop_imgs"> <img ng-src="{{img}}" /> </li>
+                                        </ul>    
+                                    </div>    
+                                </div>    
+                            </div>    
+                            <!-- 附加信息结束 -->
+                        </div>    
+                        <div class="shop-content-box">
+                            <div class="b_detail_nav">
+                                <ul>
+                                    <li class="e_nav_first m_nav_selected"><a href="#">商铺描述</a></li>
+                                </ul>    
+                            </div>
+                            <div class="shop-content">
+                                用了点评满200减100的券，感觉很值，地方很好找，日昌旁边的恭俭胡同一直往里走看见几个大红灯笼就到了，带鱼必点，味道不错，酒香肉也很好吃，一点儿也不腻，还点了乌梅汁，挺好喝的，总体还是不错的，玫瑰饼一般，总觉得烙饼这么吃味道有点儿怪 by 无双小枣儿 
+                            </div>
+                            <div class="shop-content" ng-controller="ShopInfo">
+                                <div class="img-list">
+                                    <div class="img-info" ng-repeat="img in shop_imgs">
+                                        <h4>图片标题</h4>
+                                        <div class="img-wrap">
+                                            <img ng-src="{{img}}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <!-- 点评开始 -->
+                        <div class="shop-dp-box">
+                            <div class="b_detail_nav">
+                                <ul>
+                                    <li class="e_nav_first m_nav_selected"><a href="#">商铺点评</a></li>
+                                </ul>    
+                            </div>
+                            <div class="shop-dp-list" ng-controller="DpList"> 
+                                <ul>
+                                    <li class="item" ng-repeat="dp in Dp">
+                                        <div class="item-inner clrfix">
+                                            <dl class="usr-info">
+                                                <dd><a href="#"><img src="http://i1.dpfile.com/pc/1877093dd8d1ed9ec4963bcc4805ca93(48c48)/thumb.jpg" ></a></dd>
+                                                <dt class="usr-name">
+                                                    <span>Hello Kitty</span>
+                                                </dt>    
+                                            </dl>    
+                                            <div class="dp-content">
+                                                <div class="dp-rank-box">
+                                                    <div class="dp-rank dp-rank-40"></div>
+                                                </div>  
+                                                <div class="content-txt">
+                                                    地方在一个胡同里面，听难找的，百度地图上了搜索了一阵加上打听找到了这家胡同里的很有特色的店，是老北京四合院改造的，挺有小时候的感觉，玫瑰饼不错，其他的菜品真是中规中矩吧，关键是他家地窖真的值得一看，挺有老北京的文化的，价格偏高，在这里吃的不是饭，也不是为吃饱而来的，吃的是情趣！ 
+                                                    地方在一个胡同里面，听难找的，百度地图上了搜索了一阵加上打听找到了这家胡同里的很有特色的店，是老北京四合院改造的，挺有小时候的感觉，玫瑰饼不错，其他的菜品真是中规中矩吧，关键是他家地窖真的值得一看，挺有老北京的文化的，价格偏高，在这里吃的不是饭，也不是为吃饱而来的，吃的是情趣！
+                                                <div>
+                                                <div class="bottom-bar">
+                                                    <ul>
+                                                        <li>2014-01-01</li>
+                                                    </ul>
+                                                </div>        
+                                            </div>    
+                                        </div>
+                                    </li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <!-- 点评开始 -->
+                        <!-- 分页开始 -->
+                        <div class="page-box">
+                             <div class="page-inner clrfix">
+                                 <div class="pages" >
+                                     <a href="#">上一页</a>
+                                     <a href="#">1</a>
+                                     <a href="#">2</a>
+                                     <a href="#">3</a>
+                                     <a href="#">4</a>
+                                     <a href="#">下一页</a>
+                                 </div>    
+                             </div>
+                         </div> 
+                        <!-- 分页结束 -->
+                    </div>
+                </div>
+                <div class="right-section">
+                     <div class="section-inner">
+                         <div >
+                             <div class=""></div>
+                        </div>    
+                     </div>    
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <!--#include file="/inc/footer.html" -->
+    </body>
+    <script src="detail_tpl_data.js" ></script>
+</html> 
+
+
