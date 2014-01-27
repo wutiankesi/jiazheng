@@ -1,0 +1,74 @@
+@yahei : "Microsoft YaHei" , Arial,  SimHei, "\5B8B\4F53", simsun, sans-serif;
+@heiti : "\9ED1\4F53" ;
+@red : #ed1f1f;
+@blue : #15a6d6;
+@green : #25cc97;
+@orange : #e37f32;
+@imghost : "http://image.meili180.com";
+
+@nav_color : #666;
+@select_color : #1badb6;
+@high_color : #ff7400; //高亮色彩
+@n_border : 1px solid #e0e0e0;
+
+
+.border-radius (@radius:4px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    border-radius: @radius;
+}
+.unselect() {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+.opacity(@val:0.5,@val1:50){
+    opacity : @val;
+    filter: alpha(opacity=@val1);
+    -ms-filter:alpha(opacity=@val1);
+}
+.clear(){
+    clear:both; display:block; height:0; visibility:hidden; content:".";
+}
+
+.img-fix(){
+    display : block;
+    width: auto\9;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic; 
+}
+.hide() {
+    display : none;
+}
+
+.bg-rgba() {
+     background :rgba(0,0,0,0.7); 
+     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#000000', EndColorStr='#000000')"; /* For IE8 */
+     filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#000000', EndColorStr='#000000'); /* For IE6,IE7 */
+}
+
+
+.float-left() {
+    float:left;
+    display:inline;
+}
+.float-right() {
+    float:right;
+    display:inline;
+}
+.inline-block() {
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+
+
+
+
+

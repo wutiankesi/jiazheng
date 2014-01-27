@@ -1,0 +1,1 @@
+define("js/home/tt-debug",[],function(a,b){b.cmd=function(){console.log(123)}});
