@@ -1,7 +1,37 @@
-define("js/list/list", [ "../common/page", "jquery", "../common/CD" ], function(require, exports, module) {
+define("js/list/list", [ "jquery", "../common/page", "../common/CD", "../common/header", "../common/map" ], function(require, exports, module) {
+    var $ = require("jquery");
     var pager = require("../common/page");
+    var header = require("../common/header");
+    var map_module = require("../common/map");
     exports.init = function() {
+        header.init();
         pager.defPage();
+        if (latlngs && latlngs.length > 1) {
+            var map_dom_id = "map";
+            map_module.loadMap(function() {
+                var latlng = latlngs[0], lat = latlng.lat, lng = latlng.lng;
+                var map = map_module.initMap(map_dom_id, {
+                    lat: lat,
+                    lng: lng
+                });
+                var points = latlngs.slice(0, latlngs.length - 1).map(function(latlng) {
+                    var lat = latlng.lat, lng = latlng.lng, name = latlng.name;
+                    var mk = map_module.addMark({
+                        lat: lat,
+                        lng: lng,
+                        name: name
+                    }, map);
+                    return mk.getPoint();
+                });
+                if (points.length) {
+                    map.setViewport(points, {
+                        margins: [ 20, 20, 20, 20 ]
+                    });
+                }
+            });
+        } else {
+            $("#map").hide();
+        }
     };
 });
 
@@ -1099,3 +1129,77 @@ define("js/common/page", [ "jquery", "js/common/CD" ], function(require, exports
 	  * ***/
     QNR.PubSub = new QNR.Event();
 })(window);
+
+define("js/common/header", [ "jquery" ], function(require, exports, module) {
+    var $ = require("jquery");
+    var init = function() {
+        var ch_city = $("#s-city");
+        var ch_city_list = ch_city.find("ul");
+        ch_city.mouseenter(function(e) {
+            ch_city_list.show();
+        }).mouseleave(function(e) {
+            ch_city_list.hide();
+        });
+    };
+    exports.init = init;
+});
+
+define("js/common/map", [ "js/common/CD", "jquery" ], function(require, exports, module) {
+    var CD = require("js/common/CD");
+    var loaded = false;
+    var $ = require("jquery");
+    var Marker;
+    function loadMap(callback) {
+        if (!loaded) {
+            window.b_g_fun = function() {
+                callback();
+            };
+            CD.loadJS("http://api.map.baidu.com/api?v=1.3&services=true&callback=b_g_fun");
+            loaded = true;
+            return;
+        }
+        callback();
+    }
+    function initMap(dom_id, latlng) {
+        var map = new BMap.Map(dom_id);
+        map.centerAndZoom(new BMap.Point(latlng.lng, latlng.lat), 11);
+        map.addControl(new BMap.NavigationControl({
+            type: BMAP_NAVIGATION_CONTROL_ZOOM
+        }));
+        return map;
+    }
+    exports.loadMap = loadMap;
+    exports.initMap = initMap;
+    exports.addMark = function(info, map) {
+        if (!Marker) {
+            Marker = function(point, dom) {
+                this._dom = dom;
+                this._point = point;
+            };
+            Marker.prototype = new BMap.Overlay();
+            Marker.prototype.initialize = function(map) {
+                this._map = map;
+                var div = this._dom[0];
+                map.getPanes().markerPane.appendChild(div);
+                return div;
+            };
+            Marker.prototype.draw = function() {
+                var map = this._map;
+                var pixel = map.pointToOverlayPixel(this._point);
+                this._dom.css({
+                    left: pixel.x,
+                    top: pixel.y
+                });
+            };
+            Marker.prototype.getPoint = function() {
+                return this._point;
+            };
+        }
+        var lat = info.lat, lng = info.lng, name = info.name;
+        var dom = $('<div class="dragmarkbox"><a class="e_dragmark" title="' + name + '"></a><div style="font-size:12px;line-height:14px;background:#fff;border:1px solid #ddd;">' + name + "</div></div>");
+        var point = new BMap.Point(lng, lat);
+        var mark = new Marker(point, dom);
+        map.addOverlay(mark);
+        return mark;
+    };
+});

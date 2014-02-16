@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>月嫂网</title>
+        <link href="http://source.jjfuwu.com/base/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://source.jjfuwu.com/css/pu.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <!--#include file="/inc/header.html" -->
+        
+        <div class="container main-box">
+            <div class="pu">
+                <div class="title"><h1 class="title_h">填写信息</h1></div>
+                <div class="pu-info">
+                    <p class="pu-info-txt" >
+                        店铺信息发布成功，您是否要上传店铺照片。
+                    </p>
+                </div>
+
+                <div class="pu-button-box">
+                    <div class="pu-buttons nopadding">
+                        <button id="upload_btn" class="btn btn-primary">上传照片</button>
+                        <button id="goshop_btn" class="btn">继续去店铺页</button>
+                    </div>
+                </div>    
+                <div class="upload-box">
+                    <div class="img-list">
+                        <div class="img-box">
+                            <div class="img-inner">
+                                <img src="http://i2.sinaimg.cn/ty/1098/2012/0531/U687P6T1098D1F32491DT20140216131705_small.jpg" class="img" />
+                            </div>    
+                            <a href="javscript:;" class="del-img">X</a>
+                        </div>    
+                        <div class="img-box">
+                            <div class="img-inner">
+                                <img src="http://i2.sinaimg.cn/ty/1098/2012/0531/U687P6T1098D1F32491DT20140216131705_small.jpg" class="img" />
+                            </div>    
+                            <a href="javscript:;" class="del-img">X</a>
+                        </div>    
+
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <!--#include file="/inc/footer.html" -->
+    </body>
+    <script src="http://source.jjfuwu.com/base/js/c.js"></script>
+    <script src="http://source.jjfuwu.com/js/config/home.js"></script>
+    <script src="http://source.jjfuwu.com/js/plupload.full.min.js"></script>
+    <script src="http://source.jjfuwu.com/js/pu/upload.js"></script>
+    <script>
+        jQuery(function(){
+            seajs.use('js/pu/upload',function(upload){
+                upload.init();
+            });    
+        });
+    </script>    
+</html>    

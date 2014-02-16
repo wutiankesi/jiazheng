@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>月嫂网</title>
-        <link href="http://source.jjfuwu.com/base/??css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://source.jjfuwu.com/base/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://source.jjfuwu.com/css/home.css" type="text/css" rel="stylesheet">
     </head>
     <body>
@@ -16,11 +16,13 @@
                             <div class="content">
                                 <!-- 搜索 -->
                                 <div class="part">
-                                    <div class="list-filter-box">
+                                    <!--#include file="/inc/fenlei.html" -->
+                                    <!-- div class="list-filter-box">
                                         <div class="search-box">
                                             <div class="search">
                                                 <input type="text" class="search-inp" value="" >
                                                 <button class="search-btn">搜索</button>
+                                                <a  href="#" class="submit-href">发布信息</a>
                                             </div>
                                         </div>    
                                         <div class="list-filter">
@@ -37,42 +39,12 @@
                                                 <dd><a href="#">全部</a><a href="#">1000-1200</a><a href="#">1200-1500</a><a href="#">1500-2000</a><a href="#">2000</a></dd>
                                             </dl>
                                         </div>
-                                    </div>
+                                    </div -->
                                 </div>
                                 <!-- 搜索 end -->
                                 <!-- 推荐会所 -->
                                 <div class="part">
-                                    <!-- 幻灯一个 -->
-                                    <div class="ml-slider-wrap flexslider" id="slider">
-                                        <ul class="slides">
-                                            <li>
-                                                <div class="ml-slider-item clrfix">
-                                                    <div class="img-wrap">
-                                                        <img  src="http://img12.360buyimg.com/n1/g4/M01/00/09/rBEGFk-QuwoIAAAAAAJFwME8YlMAAAD5gEAyRcAAkXY483.jpg" >
-                                                    </div>
-                                                    <div class="img-intro">
-                                                        <dl>
-                                                            <dt>这是一张图</dt>
-                                                            <dd>告诉你哪家店铺好</dd>
-                                                        </dl>    
-                                                    </div>    
-                                                </div>    
-                                            </li>
-                                              <li>
-                                                <div class="ml-slider-item clrfix">
-                                                    <div class="img-wrap">
-                                                        <img  src="http://img12.360buyimg.com/n1/g4/M01/00/09/rBEGFk-QuwoIAAAAAAJFwME8YlMAAAD5gEAyRcAAkXY483.jpg" >
-                                                    </div>
-                                                    <div class="img-intro">
-                                                        <dl>
-                                                            <dt>这是第二张图张图</dt>
-                                                            <dd>店铺简介</dd>
-                                                        </dl>    
-                                                    </div>    
-                                                </div>    
-                                            </li>
-                                        </ul>    
-                                    </div>
+                                    <!--#include file="/inc/tab.html" -->
                                 </div>
                                 <!--end --> 
                             </div>
@@ -168,49 +140,7 @@
                 </div>
                 <div class="section-right">
                      <div class="mproduct-list clrfix">
-                           <div class="product">
-                               <div class="product-ct">
-                                   <a href="#">
-                                        <img src="http://images.55bbs.com/day_131112/20131112_592da5aba40f4bcb95f9ST7337557vdh.jpg">
-                                   </a>
-                               </div>    
-                           </div>    
-                            <div class="product">
-                               <div class="product-ct">
-                                   <a href="#">
-                                        <img src="http://images.55bbs.com/day_131112/20131112_592da5aba40f4bcb95f9ST7337557vdh.jpg">
-                                   </a>
-                               </div>    
-                           </div>   
-                           <div class="product">
-                               <div class="product-ct">
-                                   <a href="#">
-                                        <img src="http://images.55bbs.com/day_131112/20131112_592da5aba40f4bcb95f9ST7337557vdh.jpg">
-                                   </a>
-                               </div>    
-                           </div>   
-                        
-                             <div class="product">
-                               <div class="product-ct">
-                                   <a href="#">
-                                        <img src="http://images.55bbs.com/day_131112/20131112_592da5aba40f4bcb95f9ST7337557vdh.jpg">
-                                   </a>
-                               </div>    
-                           </div>    
-                            <div class="product">
-                               <div class="product-ct">
-                                   <a href="#">
-                                        <img src="http://images.55bbs.com/day_131112/20131112_592da5aba40f4bcb95f9ST7337557vdh.jpg">
-                                   </a>
-                               </div>    
-                           </div>   
-                           <div class="product">
-                               <div class="product-ct">
-                                   <a href="#">
-                                        <img src="http://images.55bbs.com/day_131112/20131112_592da5aba40f4bcb95f9ST7337557vdh.jpg">
-                                   </a>
-                               </div>    
-                           </div> 
+                           <!--#include file="/inc/ad.html" -->    
                      </div>
                 </div>
              </div>    

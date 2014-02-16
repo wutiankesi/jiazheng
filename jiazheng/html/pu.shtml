@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html ng-app>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>月嫂网</title>
+        <link href="http://source.jjfuwu.com/base/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://source.jjfuwu.com/css/pu.css" type="text/css" rel="stylesheet">
+        <script src="http://cdn.bootcss.com/angular.js/1.2.5/angular.js"></script>
+    </head>
+    <body>
+        <!--#include file="/inc/header.html" -->
+        <div class="container main-box">
+            <div class="pu">
+                <div class="title"><h1 class="title_h">填写信息</h1></div>
+                <div class="pu-box">
+                    <div class="pu-content">
+                        <div class="pu-row">
+                            <div class="pu-left col2">
+                                <label>标题</label>
+                            </div>
+                            <div class="pu-right col10">
+                                <input type="text" class="txt" placeholder="type title">
+                            </div>
+                        </div>
+                        <div class="pu-row">
+                            <div class="pu-left col2">
+                                <label>联系方式</label>
+                            </div>
+                            <div class="pu-right col10">
+                                <input type="text" class="txt" placeholder="type title">
+                            </div>
+                        </div>
+                        <div class="pu-row">
+                            <div class="pu-left col2">
+                                <label>详细信息</label>
+                            </div>
+                            <div class="pu-right col10">
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                        <div class="pu-row">
+                            <div class="pu-left col2">
+                                <label>
+                                    选择分类
+                                </label>
+                            </div>
+                            <div class="pu-right col10">
+                                <select>
+                                    <option>请选择</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="pu-row">
+                            <div class="pu-left col2">
+                                <label>上传照片</label>
+                            </div>
+                            <div class="pu-right col10">
+                                <div class="upload-box"></div>
+                            </div>				
+                        </div>
+                        <div class="pu-row">
+                            <div class="pu-left col2">
+                                <label>验证码</label>
+                            </div>
+                            <div class="pu-right col10">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pu-button-box">
+                        <div class="pu-buttons">
+                            <button class="btn btn-primary"> 发 表 </button>                            
+                        </div>
+                    </div>    
+                </div>
+            </div>
+ 	</div>	
+ 	<div class="container">
+        <!--#include file="/inc/tab.html" -->
+ 	</div>
+ 	<div class="container">
+ 	</div>
+
+    <!--#include file="/inc/footer.html" -->
+    </body>
+</html>    

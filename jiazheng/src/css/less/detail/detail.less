@@ -73,11 +73,13 @@
 
         .img-list {
             margin-top : 10px;
+            overflow : hidden; 
+            position : relative;
             ul { margin-left:-5px; margin-bottom : -10px;overflow:hidden;}
-            li {
+            .img-wrap {
                 .fl;
                 width : 200px;
-                margin-left : 6px;
+                margin-left : 0px;
                 margin-bottom : 10px;
                 height : 124px;
                 overflow : hidden;
@@ -237,4 +239,47 @@
     img {
         min-width : 304px;
     }
+}
+
+
+.flexslider {
+    margin:0px;
+    background: #fff;
+    border: 0px solid #fff;
+    position: relative;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -o-border-radius: none;
+    border-radius: none;
+    -webkit-box-shadow : none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    zoom: 1;
+}
+.flex-direction-nav a {
+    font-size : 0px;
+}
+.flex-direction-nav a:before  {
+    font-size : 24px;
+}
+
+.map-box {
+    .map-hd {
+        font-family : @yahei;
+        font-size : 14px;
+        line-height : 1.5em;
+        padding : 5px;
+        padding-left : 0px;
+    }
+    .map {
+        width : 280px;
+        height : 300px;
+        border : 1px solid #ccc;
+        position : relative;
+    }
+}
+
+.section-inner {
+    background-color : #fff !important;
 }

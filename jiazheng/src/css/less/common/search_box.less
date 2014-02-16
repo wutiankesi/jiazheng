@@ -28,13 +28,12 @@
 
 .list-sort-box {
     overflow : hidden;
-    padding-bottom : 7px;
-    margin-bottom : 10px;
     border-bottom : 1px dashed #e0e0e0;
     li {
         .fl;
-        padding : 2px 5px;
+        padding : 0px 5px;
         margin-right : 8px;
+        line-height : 24px;
     }
     .first {
         font-weight : 700;
@@ -43,24 +42,25 @@
 }
 
 .list-filter {
-    margin-top : 15px;
+    margin-top : 8px;
     dl {
         overflow : hidden;
         _zoom : 1;
     }
     dt , dd {
         overflow : hidden;
+        .fl;
     }
     dt {
         margin-right : 8px;
         font-family : @yahei;
         color : #666666;
         font-weight : 500;
-        .fl;
     }
     dd {
         font-size : 0px;
         _zoom : 1;
+        width : 560px;
         a {
             font-size : 12px;
             padding : 2px 0px;
@@ -68,5 +68,12 @@
         }
     }
 
+}
+.submit-href {
+    .fr;
+    text-decoration : underline;
+    font-family:@yahei;
+    font-size : 18px;
+    margin-top : 4px;
 }
 

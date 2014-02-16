@@ -6,4 +6,7 @@ seajs.config({
         'jquery' : 'base/js/jquery', 
 	}
 });
+if(!window.$){
+    window.$ = jQuery;
+}
 

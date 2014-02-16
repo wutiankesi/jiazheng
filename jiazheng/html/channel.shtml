@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>月嫂网</title>
-        <link href="http://source.jjfuwu.com/base/??css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://source.jjfuwu.com/base/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://source.jjfuwu.com/css/channel.css" type="text/css" rel="stylesheet">
     </head>
     <body>
@@ -14,38 +14,38 @@
                 <div class="s-wrap">
                     <div class="s-left">
                         <div class="s-left-inner" >
+
+                            <div class="list-filter-box">
+
+                                <div class="class-search-box">
+                                    <div class="search-inp-box">
+                                        <input type="text" class="search-inp" value=""  />
+                                    </div>    
+                                    <div class="btn-box">
+                                        <button class="sbtn">搜索</button>
+                                        <a class="sbtn" href="#">免费发布信息</a>
+                                    </div>
+                                </div>
+                                <div class="list-filter">
+                                    <dl>
+                                        <dt>品牌:</dt>
+                                        <dd><a href="#" class="selected">全部</a><a href="#">远东</a><a href="#">Siemens/西门子</a><a href="#">博世</a><a href="#">ANEST IWATA/岩田 </a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>工作原理:</dt>
+                                        <dd><a href="#">全部</a><a href="#">真空泵</a><a href="#">离心泵</a><a href="#">旋片式</a></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>价格:</dt>
+                                        <dd><a href="#">全部</a><a href="#">1000-1200</a><a href="#">1200-1500</a><a href="#">1500-2000</a><a href="#">2000</a></dd>
+                                    </dl>
+                                </div>
+                            </div>
+
                             <div class="m-silder">
                                 <!-- 幻灯一个 -->
-                                <div class="ml-slider-wrap flexslider" id="slider">
-                                    <ul class="slides">
-                                        <li>
-                                            <div class="ml-slider-item clrfix">
-                                                <div class="img-wrap">
-                                                    <img  src="http://img12.360buyimg.com/n1/g4/M01/00/09/rBEGFk-QuwoIAAAAAAJFwME8YlMAAAD5gEAyRcAAkXY483.jpg" >
-                                                </div>
-                                                <div class="img-intro">
-                                                    <dl>
-                                                        <dt>这是一张图</dt>
-                                                        <dd>告诉你哪家店铺好</dd>
-                                                    </dl>    
-                                                </div>    
-                                            </div>    
-                                        </li>
-                                          <li>
-                                            <div class="ml-slider-item clrfix">
-                                                <div class="img-wrap">
-                                                    <img  src="http://img12.360buyimg.com/n1/g4/M01/00/09/rBEGFk-QuwoIAAAAAAJFwME8YlMAAAD5gEAyRcAAkXY483.jpg" >
-                                                </div>
-                                                <div class="img-intro">
-                                                    <dl>
-                                                        <dt>这是第二张图张图</dt>
-                                                        <dd>店铺简介</dd>
-                                                    </dl>    
-                                                </div>    
-                                            </div>    
-                                        </li>
-                                    </ul>    
-                                </div>
+                                <!--#include file="/inc/slider.html" -->
+                                <!-- 幻灯一个 END -->
                             </div>
                         </div>
                     </div>
@@ -258,11 +258,110 @@
                         </div>    
                     </div>
                     <div class="s-right">
-                    
+                        
+
+                         <div class="mproduct-list clrfix">
+                           <div class="wa-box wa-one">
+                                <div class="img-box">
+                                    <a href="#">
+                                        <img src="http://images.55bbs.com/day_131112/20131112_592da5aba40f4bcb95f9ST7337557vdh.jpg" class="img">
+                                    </a>   
+                                </div>
+                                <div class="img-info">
+                                    <a href="#" target="_blank" class="info">
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="wa-box wa-one">
+                                <div class="img-box">
+                                    <a href="#">
+                                        <img src="http://images.55bbs.com/day_131112/20131112_592da5aba40f4bcb95f9ST7337557vdh.jpg" class="img">
+                                    </a>   
+                                </div>
+                                <div class="img-info">
+                                    <a href="#" target="_blank" class="info">
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="wa-box wa-one">
+                                <div class="img-box">
+                                    <a href="#">
+                                        <img src="http://images.55bbs.com/day_131112/20131112_592da5aba40f4bcb95f9ST7337557vdh.jpg" class="img">
+                                    </a>   
+                                </div>
+                                <div class="img-info">
+                                    <a href="#" target="_blank" class="info">
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="wa-box wa-one">
+                                <div class="img-box">
+                                    <a href="#">
+                                        <img src="http://images.55bbs.com/day_131112/20131112_592da5aba40f4bcb95f9ST7337557vdh.jpg" class="img">
+                                    </a>   
+                                </div>
+                                <div class="img-info">
+                                    <a href="#" target="_blank" class="info">
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="wa-box wa-one">
+                                <div class="img-box">
+                                    <a href="#">
+                                        <img src="http://images.55bbs.com/day_131112/20131112_592da5aba40f4bcb95f9ST7337557vdh.jpg" class="img">
+                                    </a>   
+                                </div>
+                                <div class="img-info">
+                                    <a href="#" target="_blank" class="info">
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                     这是一条广告，广告介绍。
+                                    </a>
+                                </div>
+                            </div>
+                     </div>
+
+
+            
+
                     </div>    
                 </div>
             </div>    
         </div>
         <!--#include file="/inc/footer.html" -->
     </body>
+    <script src="http://source.jjfuwu.com/base/js/c.js"></script>
+    <script src="http://source.jjfuwu.com/js/config/home.js"></script>
+    <script src="http://source.jjfuwu.com/js/channel/channel.js"></script>
+    <script>
+        jQuery(function(){
+            seajs.use('js/channel/channel',function(channel){
+                channel.init();
+            });    
+        });
+    </script>    
+
 </html> 

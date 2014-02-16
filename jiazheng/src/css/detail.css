@@ -1,4 +1,34 @@
 @charset "utf-8";
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+@font-face {
+  font-family: 'flexslider-icon';
+  src: url('http://source.ifangsong.com/fonts/flexslider-icon.eot');
+  src: url('http://source.ifangsong.com/fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('http://source.ifangsong.com/fonts/flexslider-icon.woff') format('woff'), url('http://source.ifangsong.com/fonts/flexslider-icon.ttf') format('truetype'), url('http://source.ifangsong.com/fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.dragmarkbox {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  line-height: 0px;
+  font-size: 0px;
+}
+.e_dragmark {
+  background: url("http://source.qunar.com/site/images/travel/place/icons_map_mark_v2.png") no-repeat scroll 0px 0px transparent;
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://source.qunar.com/site/images/travel/place/icons_map_mark_v2.png', sizingMethod='scale');
+  position: absolute;
+  left: 9px;
+  top: -36px;
+  display: block;
+  width: 25px;
+  height: 38px;
+  vertical-align: middle;
+  cursor: pointer;
+}
 .divide-line .container {
   position: relative;
   margin-top: 15px;
@@ -105,7 +135,7 @@ a:hover {
   clear: both;
 }
 .hide {
-  display: none !important;
+  display: none;
 }
 .hidden {
   visibility: hidden !important;
@@ -140,6 +170,9 @@ a:hover {
   height: 0;
   visibility: hidden;
   content: ".";
+}
+.hide {
+  display: none;
 }
 html,
 body {
@@ -302,6 +335,30 @@ img {
   font-family: Arial;
   padding-right: 2px;
 }
+.usr-login {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 12px;
+}
+.usr-login a {
+  color: #fff;
+}
+.s-city {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-left: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.s-city .dropdown-menu {
+  top: 16px;
+}
+.hd-main {
+  position: relative;
+}
 .main {
   margin-top: 45px;
 }
@@ -374,6 +431,449 @@ img {
   *display: inline;
   *zoom: 1;
 }
+.col1 {
+  width: 8.3%;
+}
+.col2 {
+  width: 16.7%;
+}
+.col3 {
+  width: 25%;
+}
+.col4 {
+  width: 33.3%;
+}
+.col5 {
+  width: 42%;
+}
+.col6 {
+  width: 50%;
+}
+.col7 {
+  width: 58.3%;
+}
+.col8 {
+  width: 66.7%;
+}
+.col9 {
+  width: 75%;
+}
+.col10 {
+  width: 83.3%;
+}
+.col11 {
+  width: 91.7%;
+}
+.col12 {
+  width: 100%;
+}
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/* Browser Resets
+*********************************/
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+@font-face {
+  font-family: 'flexslider-icon';
+  src: url('http://source.ifangsong.com/fonts/flexslider-icon.eot');
+  src: url('http://source.ifangsong.com/fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('http://source.ifangsong.com/fonts/flexslider-icon.woff') format('woff'), url('http://source.ifangsong.com/fonts/flexslider-icon.ttf') format('truetype'), url('http://source.ifangsong.com/fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+/* Clearfix for the .slides element */
+.slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .slides {
+  display: block;
+}
+* html .slides {
+  height: 1%;
+}
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+  display: block;
+}
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {
+  margin: 0 0 60px;
+  background: #fff;
+  border: 4px solid #fff;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  zoom: 1;
+}
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.loading .flex-viewport {
+  max-height: 300px;
+}
+.flexslider .slides {
+  zoom: 1;
+}
+.carousel li {
+  margin-right: 5px;
+}
+/* Direction Nav */
+.flex-direction-nav {
+  *height: 0;
+}
+.flex-direction-nav a {
+  text-decoration: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.flex-direction-nav .flex-prev {
+  left: -50px;
+}
+.flex-direction-nav .flex-next {
+  right: -50px;
+  text-align: right;
+}
+.flexslider:hover .flex-prev {
+  opacity: 0.7;
+  left: 10px;
+}
+.flexslider:hover .flex-next {
+  opacity: 0.7;
+  right: 10px;
+}
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {
+  opacity: 1;
+}
+.flex-direction-nav .flex-disabled {
+  opacity: 0!important;
+  filter: alpha(opacity=0);
+  cursor: default;
+}
+.flex-direction-nav a:before {
+  font-family: "flexslider-icon";
+  font-size: 40px;
+  display: inline-block;
+  content: '\f001';
+}
+.flex-direction-nav a.flex-next:before {
+  content: '\f002';
+}
+/* Pause/Play */
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+.flex-pauseplay a:before {
+  font-family: "flexslider-icon";
+  font-size: 20px;
+  display: inline-block;
+  content: '\f004';
+}
+.flex-pauseplay a:hover {
+  opacity: 1;
+}
+.flex-pauseplay a.flex-play:before {
+  content: '\f003';
+}
+/* Control Nav */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+}
+.flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.flex-control-paging li a:hover {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+}
+.flex-control-paging li a.flex-active {
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default;
+}
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+}
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+.flex-control-thumbs img {
+  width: 100%;
+  display: block;
+  opacity: .7;
+  cursor: pointer;
+}
+.flex-control-thumbs img:hover {
+  opacity: 1;
+}
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default;
+}
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+}
+.b_dialog_mask {
+  background-color: #000000;
+  width: 100%;
+  height: 120%;
+  opacity: 0.8;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  filter: alpha(opacity=50);
+  -ms-filter: alpha(opacity=50);
+  _height: 3000px;
+  _position: absolute;
+  _overflow: hidden;
+  z-index: 1000;
+}
+.b_dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
+  padding: 10px;
+  z-index: 5000;
+}
+.b_dialog .btn_close {
+  background: url("http://source.qunar.com/site/images/travel/place/icon_close_02.gif") no-repeat 0px 0px;
+  display: block;
+  text-indent: -9999px;
+  font: normal 18px/32px Verdana, arial, sans-serif;
+  color: #555555;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0px;
+  right: -32px;
+}
+.b_dialog .btn_close_small {
+  background: url("http://source.qunar.com/site/images/travel/btn.close.gif") no-repeat 0px 0px;
+  display: block;
+  text-indent: -9999px;
+  font: normal 18px/32px Verdana, arial, sans-serif;
+  color: #555555;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+.b_dialog .e_dialog_hd {
+  font: 16px/30px "microsoft yahei", arial, sans-serif;
+  color: #555;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d1d1d1;
+  position: relative;
+  z-index: 300;
+}
+.b_dialog .e_dialog_ct {
+  width: 100%;
+  z-index: 200;
+}
+.b_dialog .e_dialog_ft {
+  padding: 10px 0px;
+  text-align: center;
+  z-index: 100;
+}
+.b_dialog .e_dialog_ft .box_ops {
+  padding: 0px;
+  text-align: center;
+  z-index: 30;
+}
+.b_dialog .e_dialog_ft .box_ops .ops_btn {
+  background: url("http://source.qunar.com/site/images/travel/place/btn_bg_blue.gif") repeat-x scroll 100px 100px #5ec0f2;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  font: 14px/30px arial, sans-serif;
+  text-align: center;
+  border: 0px none;
+  border-radius: 2px;
+  margin: 0px 5px;
+}
+/***kai.wei 新增外框  ***/
+.dlg_mask {
+  background: #000;
+  filter: alpha(opacity=30);
+  -ms-filter: alpha(opacity=30);
+  width: 100%;
+  height: 100%;
+  _height: 3000px;
+  opacity: 0.3;
+  position: fixed;
+  _position: absolute;
+  top: 0px;
+  left: 0px;
+  _overflow: hidden;
+}
+.dlg_mask .dlg_miframe {
+  width: 100%;
+  height: 100%;
+  _height: 3000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: alpha(opacity=0);
+}
+body.g_mask_body {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+  _background-image: url(about:blank);
+  _background-attachment: fixed;
+}
+.g_dlg_box {
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  _position: absolute;
+}
+.g_dlg_wrap_css3 {
+  -moz-transition: top 400ms ease-out, opacity 200ms, height 300ms ease-out;
+  -webkit-transition: top 400ms ease-out, opacity 200ms, height 300ms ease-out;
+  -ms-transition: top 400ms ease-out, opacity 200ms, height 300ms ease-out;
+  -o-transition: top 400ms ease-out, opacity 200ms, height 300ms ease-out;
+  transition: top 400ms ease-out, opacity 200ms, height 300ms ease-out;
+}
+.pop_msg {
+  background: url(http://source.qunar.com/site/images/travel/plan/media/pop_msg.png);
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://source.qunar.com/site/images/travel/plan/media/pop_msg.png", sizingMethod="scale");
+  padding: 10px;
+  width: 355px;
+  height: 50px;
+  /*line-height:51px*/
+}
+.pop_msg table {
+  width: 100%;
+  height: 100%;
+}
+.pop_msg td {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.6;
+}
 .right-section .section-inner {
   margin-top: 28px;
 }
@@ -436,17 +936,19 @@ img {
 }
 .detail-box .add-box .img-list {
   margin-top: 10px;
+  overflow: hidden;
+  position: relative;
 }
 .detail-box .add-box .img-list ul {
   margin-left: -5px;
   margin-bottom: -10px;
   overflow: hidden;
 }
-.detail-box .add-box .img-list li {
+.detail-box .add-box .img-list .img-wrap {
   float: left;
   _display: inline;
   width: 200px;
-  margin-left: 6px;
+  margin-left: 0px;
   margin-bottom: 10px;
   height: 124px;
   overflow: hidden;
@@ -580,4 +1082,192 @@ img {
 }
 .img-info img {
   min-width: 304px;
+}
+.flexslider {
+  margin: 0px;
+  background: #fff;
+  border: 0px solid #fff;
+  position: relative;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  zoom: 1;
+}
+.flex-direction-nav a {
+  font-size: 0px;
+}
+.flex-direction-nav a:before {
+  font-size: 24px;
+}
+.map-box .map-hd {
+  font-family: "Microsoft YaHei", Arial, SimHei, "\5B8B\4F53", simsun, sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  padding: 5px;
+  padding-left: 0px;
+}
+.map-box .map {
+  width: 280px;
+  height: 300px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+.section-inner {
+  background-color: #fff !important;
+}
+.comment_form {
+  margin-top: 10px;
+  padding-top: 5px;
+  font-size: 12px;
+}
+.comment_form .row {
+  margin-left: 0px;
+}
+.comment_form .row .vcenter {
+  margin-top: 10px;
+}
+.comment_form input,
+.comment_form textarea {
+  font-size: 12px;
+}
+.comment_form input {
+  width: 200px;
+}
+.comment_form input.ms_pro {
+  width: 100px;
+}
+.comment_form h2 {
+  position: relative;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  line-height: 40px;
+  color: #999;
+  background: #F3F3F3;
+}
+.comment_form h2 strong {
+  font-size: 12px;
+  color: #C00;
+}
+.comment_form .label {
+  margin-top: 0px;
+  margin-right: 0;
+  float: left;
+  width: 60px;
+  background: none;
+  color: #666;
+  text-shadow: none;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+.comment_form .label em {
+  color: #C00;
+  position: relative;
+  left: -5px;
+  top: 2px;
+  width: 8px;
+  overflow: hidden;
+}
+.comment_form .label_required {
+  padding-right: 4px;
+  width: 84px;
+}
+.comment_form .comment_desc {
+  width: 480px;
+  height: 80px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.comment_form .row {
+  margin-bottom: 15px;
+}
+.comment_form .row .col {
+  margin-right: 15px;
+  float: left;
+}
+.comment_form .row select {
+  margin-left: 10px;
+}
+.comment_form .kch_code {
+  float: left;
+  margin-left: 10px;
+  margin-top: -8px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.score_wrap {
+  float: left;
+  margin-right: 10px;
+  padding: 8px;
+  background-color: #FFFCEB;
+  border: 1px solid #f0c36d;
+}
+.score_wrap ul,
+.core_wrap ul li a:hover,
+.score_wrap .active-star {
+  background-image: url(http://source.ifangsong.com/image/ifs/g.score_0.png);
+  background-repeat: no-repeat;
+}
+.comment_form .msg {
+  color: #f03245;
+}
+.score_box .msg {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.score_wrap ul li a {
+  display: block;
+  height: 25px;
+  text-indent: -9999px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.score_wrap ul {
+  float: left;
+  width: 129px;
+  height: 25px;
+  background-position: 0 -150px;
+  z-index: 10;
+  position: relative;
+  zoom: 1;
+}
+.score_wrap ul li {
+  float: left;
+}
+.score_wrap .one_star {
+  width: 25px;
+  z-index: 50;
+  background-position: 0 -120px;
+}
+.score_wrap .two_star {
+  width: 51px;
+  z-index: 40;
+  background-position: 0 -90px;
+}
+.score_wrap .three_star {
+  width: 77px;
+  z-index: 30;
+  background-position: 0 -60px;
+}
+.score_wrap .four_star {
+  width: 103px;
+  z-index: 20;
+  background-position: 0 -30px;
+}
+.score_wrap .five_star {
+  width: 129px;
+  z-index: 10;
+  background-position: 0 0;
 }

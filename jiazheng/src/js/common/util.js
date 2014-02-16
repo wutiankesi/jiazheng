@@ -1,6 +1,10 @@
 define(function(require, exports, module) {
     var QNR = window.QNR;
     var Browser = QNR.Browser;
+    var Dialog = require('./dialog');
+    var msg_dlg ;
+    var html =  '<div class="b_dialog" style="width: 560px;"><div class="e_dialog_hd">提示</div><div class="e_dialog_ct js_content"></div><div class="e_dialog_ft"></div><a href="#" class="btn_close js_close" title="关闭">x</a></div>';
+
 	var util = {
 
 		getPages: function(pagger, _offset, _t_f_limit) {
@@ -111,14 +115,14 @@ define(function(require, exports, module) {
 		},
 		showMsg: function(msg, timer) {
 			if (!msg_dlg) {
-				msg_dlg = new QNR.Dialog({
+				msg_dlg = new Dialog({
 					content: html
 				});
 			}
 			msg_dlg.getContent().html(msg);
 			msg_dlg.show();
 			var t = setTimeout(function() {
-				msg_dlg.hide();
+			    msg_dlg.hide();
 			},
 			timer || 3000);
 			return t;

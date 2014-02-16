@@ -12,6 +12,22 @@
 @n_border : 1px solid #e0e0e0;
 
 
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+@font-face {
+	font-family: 'flexslider-icon';
+	src:url('http://source.ifangsong.com/fonts/flexslider-icon.eot');
+	src:url('http://source.ifangsong.com/fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'),
+		url('http://source.ifangsong.com/fonts/flexslider-icon.woff') format('woff'),
+		url('http://source.ifangsong.com/fonts/flexslider-icon.ttf') format('truetype'),
+		url('http://source.ifangsong.com/fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+	font-weight:normal;
+	font-style: normal;
+}
+
+
+
 .border-radius (@radius:4px) {
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
@@ -67,6 +83,49 @@
     *display:inline;
     *zoom:1;
 }
+
+.prev-next-box(){
+    position : relative;
+    .icon {
+       text-decoration:none; display: block; width: 40px; height: 40px; margin: -20px 0 0; position: absolute; top: 50%; z-index: 10; overflow: hidden; opacity: 0; cursor: pointer; color: rgba(0,0,0,0.8); text-shadow: 1px 1px 0 rgba(255,255,255,0.3); -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease; 
+       & before {      
+            font-family: "flexslider-icon"; font-size: 40px; display: inline-block; content: '\f001'; 
+        }
+    }
+    .next {
+        right : 0px;
+        & before {
+            content: '\f002'; 
+        }
+    }
+    .prev {
+        left : 0px;
+        & before {
+        }
+    }
+}
+
+ .dragmarkbox {
+        width:1px;
+        height:1px;
+        position:absolute;
+        line-height:0px;
+        font-size:0px;
+}
+@imgsrc:"http://source.qunar.com/site/images/travel";
+
+.e_dragmark {
+    background:url("@{imgsrc}/place/icons_map_mark_v2.png") no-repeat scroll 0px 0px transparent; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{imgsrc}/place/icons_map_mark_v2.png', sizingMethod='scale');
+    position:absolute;
+    left:9px;
+    top:-36px;
+    display:block;
+    width:25px;
+    height:38px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
 
 
 

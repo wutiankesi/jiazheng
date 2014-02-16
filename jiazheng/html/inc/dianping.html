@@ -1,0 +1,36 @@
+<div class="b_detail_nav">
+    <ul>
+        <li class="e_nav_first m_nav_selected"><a href="#">我要点评</a></li>
+    </ul>    
+</div>
+<div class="comment_form" id="comment_form" data-id="{{}}">
+    <form>
+        <input type="hidden" name="source_id" value="{{}}">
+        <div class="score_box clearfix">
+            <div class="row clearfix" id="total_con"><span class="label label_require vcenter">总体评价</span>
+                <div class="score_wrap">
+                    <ul>
+                        <li><a class="one_star" href="#" data-value="1" title="很差"></a></li>
+                        <li><a class="two_star" href="#" data-value="2" title="差"></a></li>
+                        <li><a class="three_star" href="#" data-value="3" title="还行"></a></li>
+                        <li><a class="four_star" href="#" data-value="4" title="好"></a></li>
+                        <li><a class="five_star" href="#" data-value="5" title="很好"></a></li>
+                    </ul>   
+                </div>
+                <span class="hide msg" style="display: none;">很好</span>
+            </div>
+        </div>
+        <div class="row"><span class="label label_require">评价</span>
+            <textarea name="com" class="comment_desc e_input e_text e_text_1" row="7" id="com"></textarea>
+            <div class="hide msg" style="margin-left:70px"></div>
+        </div>
+        <div class="row clearfix"><span class="label label_require">验证码</span>
+            <input type="text" name="vCode" id="vCode" class="ms_pro e_input e_text e_text_1 fl">
+            <span class="kch_code"><img id="ktp" src="/kaptcha"></span>
+            <span class="hide msg"></span>
+        </div>
+        <div class="row comment_btn_con">
+            <button type="button" class="btn">发表点评</button>
+        </div>
+    </form>
+</div>
